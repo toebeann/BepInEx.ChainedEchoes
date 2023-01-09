@@ -12,7 +12,7 @@ a="/$0"; a=${a%/*}; a=${a#/}; a=${a:-.}; BASEDIR=$(cd "$a"; pwd -P)
 # EDIT THIS: The name of the executable to run
 # LINUX: This is the name of the Unity game executable 
 # MACOS: This is the name of the game app folder, including the .app suffix
-executable_name="Subnautica"
+executable_name="Chained Echoes"
 
 # The rest is automatically handled by BepInEx
 
@@ -24,7 +24,7 @@ export DOORSTOP_INVOKE_DLL_PATH="$BASEDIR/BepInEx/core/BepInEx.Preloader.dll"
 
 # If specified, Doorstop will load core libraries from this folder instead of the normal Managed folder
 # Mainly usable to unstrip assemblies in some games
-export DOORSTOP_CORLIB_OVERRIDE_PATH=""
+export DOORSTOP_CORLIB_OVERRIDE_PATH="corlibs"
 
 # ----- DO NOT EDIT FROM THIS LINE FORWARD  ------
 # ----- (unless you know what you're doing) ------
@@ -49,7 +49,7 @@ lib_postfix=""
 os_type=$(uname -s)
 case $os_type in
     Linux*)
-        executable_path="$BASEDIR/${executable_name}"
+        executable_path="$BASEDIR/${executable_name}.x86_64"
         lib_postfix="so"
         ;;
     Darwin*)
