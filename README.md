@@ -34,7 +34,7 @@ To install manually, follow these instructions:
 
 ### Configuration (Windows)
 
-No need to configure. Simply run the game as usual i.e. by launching from Steam/Epic Games/etc. If everything is correct, you will see a console pop up.
+No need to configure. Simply run the game as usual i.e. by launching from Steam/Xbox Store/etc. If everything is correct, you will see a console pop up.
 
 ### Configuration (Linux)
 
@@ -60,16 +60,12 @@ At this moment you will not see any clear indication that BepInEx is working. It
 4. At this point, you may see a prompt warning you that "libdoorstop_x64.dylib" cannot be opened because the developer is unverified. In this case:
    1. Open System Preferences.
    2. Go to Security & Privacy and select the General tab.
-   3. Towards the bottom you should see a message saying that "libdoorstop_x64.dylib" was blocked from opening. Click the button "Open Anyway" and confirm the prompt that pops up.
+   3. Towards the bottom you should see a message saying that the program was blocked from opening. Click "Open Anyway" and confirm the prompt that pops up.
    4. Run the game via Steam.
 
 At this moment you will not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing F1 to open the Configuration Manager window.
 
 ## Useful links
-
--   [Third-party site with a list of known compatible BepInEx plugins](https://ramuneneptune.github.io/modlists/sn.html)
-
-### Useful links for mod authors
 
 -   [BepInEx: writing basic plugin walkthrough](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/)
 -   [BepInEx: useful plugins for modding](https://docs.bepinex.dev/articles/dev_guide/dev_tools.html)
