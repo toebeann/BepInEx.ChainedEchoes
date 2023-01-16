@@ -1,19 +1,19 @@
 {
-  "name": "bepinex-subnautica",
-  "version": "1.0.0",
-  "description": "BepInEx pack for Subnautica. Preconfigured and ready to use.",
+  "name": "bepinex-chainedechoes",
+  "version": "1.0.1",
+  "description": "BepInEx pack for Chained Echoes. Preconfigured and ready to use.",
   "author": "Tobey Blaber (https://github.com/toebeann)",
   "license": "LGPL-2.1",
-  "homepage": "https://github.com/toebeann/bepinex.subnautica",
+  "homepage": "https://github.com/toebeann/bepinex.chainedechoes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/toebeann/bepinex.subnautica.git"
+    "url": "https://github.com/toebeann/bepinex.chainedechoes.git"
   },
   "bugs": {
-    "url": "https://github.com/toebeann/bepinex.subnautica/issues"
+    "url": "https://github.com/toebeann/bepinex.chainedechoes/issues"
   },
   "funding": [
-    "https://github.com/toebeann/bepinex.subnautica?sponsor=1",
+    "https://github.com/toebeann/bepinex.chainedechoes?sponsor=1",
     {
       "type": "ko-fi",
       "url": "https://ko-fi.com/toebean_"
