@@ -41,7 +41,7 @@ const gitConfigEmail: string = getInput('git-config-email')
 const REPO = { owner: 'toebeann', repo: 'bepinex.chainedechoes' };
 const BEPINEX_REPO = { owner: 'BepInEx', repo: 'BepInEx' };
 const PAYLOAD_DIR = 'payload';
-const ASSETS_DIR = 'assets';
+const DIST_DIR = 'dist';
 const METADATA_FILE = '.metadata.json';
 const BepInExReleaseTypes = ['x86', 'x64', 'unix'] as const;
 const UNITY_VERSION = '2020.3.36';
@@ -234,8 +234,8 @@ const handleAsset = async (release: Release, type: BepInExReleaseType, corlibsBu
                 if (corlibsBuffer) {
                     await embedCorlibs(archive, corlibsBuffer, type);
                 }
-                await fs.ensureDir(ASSETS_DIR);
-                await writeZipToDisk(join(ASSETS_DIR, asset.name), archive, type);
+                await fs.ensureDir(DIST_DIR);
+                await writeZipToDisk(join(DIST_DIR, asset.name), archive, type);
                 return { asset, type, success: true };
             } else {
                 return { asset, type, success: false };
@@ -351,8 +351,8 @@ if (env.MODE !== 'dev') {
                 generate_release_notes: true
             });
 
-            console.log('Uploading assets...');
-            const assets = await getFileNames('assets');
+            console.log('Uploading release assets...');
+            const assets = await getFileNames(DIST_DIR);
             for await (const asset of assets) {
                 const uploadReleaseAsset = octokit.rest.repos.uploadReleaseAsset.defaults({
                     headers: {
