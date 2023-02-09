@@ -75,5 +75,4 @@ At this moment you will not see any clear indication that BepInEx is working. It
 
 At this moment, you can use the following channels to ask for help
 
--   Send me a message on discord: `toebean#0001`
 -   [BepInEx Discord](https://discord.gg/MpFEDAg) -- **Only technical support for THIS PACKAGE. No support for plugins.**
