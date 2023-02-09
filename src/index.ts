@@ -210,7 +210,7 @@ const embedCorlibs = async (archive: JSZip, buffer: ArrayBuffer, type: BepInExRe
 
     const corlibs = await JSZip.loadAsync(buffer);
     for (const path of Object.keys(corlibs.files).filter(corlibsFilter)) {
-        archive.file(join('BepInEx', 'corlibs', path), await corlibs.file(path)!.async('uint8array'));
+        archive.file(join('corlibs', path), await corlibs.file(path)!.async('uint8array'));
     }
 
     return archive;
