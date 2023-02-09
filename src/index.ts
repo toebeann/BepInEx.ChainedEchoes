@@ -321,15 +321,14 @@ if (handled.every(result => !result.success)) {
 }
 
 // at this point all assets have been successfully downloaded and saved to disk with embedded payloads
-
 await writeMetadataToDisk(metadata); // update metadata
 
-const git = simpleGit();
-const status = await git.status();
-const changedFiles = [...status.not_added, ...status.modified];
-const metadataPath = changedFiles.find(file => file.endsWith(METADATA_FILE));
-
 if (env.MODE !== 'dev') {
+    const git = simpleGit();
+    const status = await git.status();
+    const changedFiles = [...status.not_added, ...status.modified];
+    const metadataPath = changedFiles.find(file => file.endsWith(METADATA_FILE));
+
     if (metadataPath) {
         await git.addConfig('safe.directory', env.GITHUB_WORKSPACE || '', false, 'global');
         await git.addConfig('user.name', gitConfigName);
