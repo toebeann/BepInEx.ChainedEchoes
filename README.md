@@ -23,7 +23,7 @@ In particular, this pack comes with:
 
 ## Installation (automatic, Windows only)
 
-1. Install [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/) and the [Chained Echoes Support extension](https://www.nexusmods.com/site/mods/519) if you haven't already. Make sure they're fully up-to-date.
+1. Install [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/) and the [Chained Echoes Support](https://www.nexusmods.com/site/mods/519) extension if you haven't already. Make sure they're fully up-to-date.
 2. In Vortex, simply begin managing Chained Echoes from the Games tab, and Vortex will automatically install the BepInEx Pack for you.
 3. Run the game. If everything runs correctly, you will see the BepInEx console pop up on your desktop.
 
