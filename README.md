@@ -21,6 +21,12 @@ In particular, this pack comes with:
 - a preconfigured `BepInEx.cfg` that enables the BepInEx console and more extensive logging, and
 - the `mscorlib.dll` assembly for Unity v2020.3.36 as the one shipped with the game has certain features removed. This enables compatibility with [Unity Explorer](https://github.com/sinai-dev/UnityExplorer)'s REPL functionality, as well as any plugin requiring access to the `System.Reflection.Emit` namespace, among others.
 
+## Installation (automatic, Windows only)
+
+1. Install [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/) and the [Chained Echoes Support extension](https://www.nexusmods.com/site/mods/519) if you haven't already. Make sure they're fully up-to-date.
+2. In Vortex, simply begin managing Chained Echoes from the Games tab, and Vortex will automatically install the BepInEx Pack for you.
+3. Run the game. If everything runs correctly, you will see the BepInEx console pop up on your desktop.
+
 ## Installation (manual)
 
 To install manually, follow these instructions:
