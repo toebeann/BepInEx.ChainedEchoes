@@ -45,7 +45,8 @@ const DIST_DIR = 'dist';
 const METADATA_FILE = '.metadata.json';
 const BepInExReleaseTypes = ['x86', 'x64', 'unix'] as const;
 const UNITY_VERSION = '2020.3.36';
-const corlibsFilter = (corlib: string) => corlib === 'mscorlib.dll';
+const includedCorlibs = ['mscorlib.dll'];
+const corlibsFilter = (corlib: string) => includedCorlibs.includes(corlib);
 
 type BepInExReleaseType = typeof BepInExReleaseTypes[number];
 type Release = Awaited<ReturnType<typeof octokit.rest.repos.getRelease>>['data'];
@@ -227,22 +228,19 @@ const handleAsset = async (release: Release, type: BepInExReleaseType, corlibsBu
 
     try {
         asset = getAsset(release, type);
-        if (asset) {
-            const assetBuffer = await downloadAsset(asset, type);
-            if (assetBuffer) {
-                const archive = await embedPayload(await JSZip.loadAsync(assetBuffer), type);
-                if (corlibsBuffer) {
-                    await embedCorlibs(archive, corlibsBuffer, type);
-                }
-                await fs.ensureDir(DIST_DIR);
-                await writeZipToDisk(join(DIST_DIR, asset.name), archive, type);
-                return { asset, type, success: true };
-            } else {
-                return { asset, type, success: false };
-            }
-        } else {
+        if (!asset)
             return { asset, type, success: false };
-        }
+
+        const assetBuffer = await downloadAsset(asset, type);
+        if (!assetBuffer)
+            return { asset, type, success: false };
+
+        const archive = await JSZip.loadAsync(assetBuffer);
+        await embedPayload(archive, type);
+        if (corlibsBuffer) await embedCorlibs(archive, corlibsBuffer, type);
+        await fs.ensureDir(DIST_DIR);
+        await writeZipToDisk(join(DIST_DIR, asset.name), archive, type);
+        return { asset, type, success: true };
     } catch {
         return { asset, type, success: false };
     }
@@ -302,7 +300,7 @@ if (!corlibsBuffer) exit(1);
 
 const handled = await Promise.all([
     handleAsset(latestBepInExRelease, 'x64', corlibsBuffer),
-    handleAsset(latestBepInExRelease, 'unix', corlibsBuffer)
+    handleAsset(latestBepInExRelease, 'unix', corlibsBuffer),
 ]); // create assets
 
 // check for failures
@@ -320,59 +318,60 @@ if (handled.every(result => !result.success)) {
     exit(1);
 }
 
+if (env.MODE === 'dev')
+    exit(0);
+
 // at this point all assets have been successfully downloaded and saved to disk with embedded payloads
 await writeMetadataToDisk(metadata); // update metadata
 
-if (env.MODE !== 'dev') {
-    const git = simpleGit();
-    const status = await git.status();
-    const changedFiles = [...status.not_added, ...status.modified];
-    const metadataPath = changedFiles.find(file => file.endsWith(METADATA_FILE));
+const git = simpleGit();
+const status = await git.status();
+const changedFiles = [...status.not_added, ...status.modified];
+const metadataPath = changedFiles.find(file => file.endsWith(METADATA_FILE));
 
-    if (metadataPath) {
-        await git.addConfig('safe.directory', env.GITHUB_WORKSPACE || '', false, 'global');
-        await git.addConfig('user.name', gitConfigName);
-        await git.addConfig('user.email', gitConfigEmail);
-        await git.addConfig('core.ignorecase', 'false');
+if (!metadataPath) {
+    console.error('Metadata unchanged!');
+    exit(1);
+}
 
-        console.log('Committing metadata...');
-        await git.add('.metadata.json');
-        const commit = await git.commit('Updating metadata', [metadataPath]);
-        await git.push();
+await git.addConfig('safe.directory', env.GITHUB_WORKSPACE || '', false, 'global');
+await git.addConfig('user.name', gitConfigName);
+await git.addConfig('user.email', gitConfigEmail);
+await git.addConfig('core.ignorecase', 'false');
 
-        try {
-            console.log('Creating release...');
-            const release = await octokit.rest.repos.createRelease({
-                ...REPO,
-                tag_name: `v${version}`,
-                target_commitish: commit.commit,
-                name: latestBepInExRelease.name ?? `BepInEx ${metadata.version}`,
-                body: latestBepInExRelease.body ?? undefined,
-                generate_release_notes: true
-            });
+console.log('Committing metadata...');
+await git.add('.metadata.json');
+const commit = await git.commit('Updating metadata', [metadataPath]);
+await git.push();
 
-            console.log('Uploading release assets...');
-            const assets = await getFileNames(DIST_DIR);
-            for await (const asset of assets) {
-                const uploadReleaseAsset = octokit.rest.repos.uploadReleaseAsset.defaults({
-                    headers: {
-                        'content-type': latestBepInExRelease.assets.find(a => a.name === basename(asset))?.content_type ?? 'application/x-zip-compressed'
-                    }
-                });
-                await octokit.request(`${uploadReleaseAsset.endpoint.DEFAULTS.method} ${uploadReleaseAsset.endpoint.DEFAULTS.url}`, {
-                    ...uploadReleaseAsset.endpoint.DEFAULTS,
-                    ...REPO,
-                    release_id: release.data.id,
-                    name: basename(asset),
-                    data: (await fs.readFile(asset))
-                });
+try {
+    console.log('Creating release...');
+    const release = await octokit.rest.repos.createRelease({
+        ...REPO,
+        tag_name: `v${version}`,
+        target_commitish: commit.commit,
+        name: latestBepInExRelease.name ?? `BepInEx ${metadata.version}`,
+        body: latestBepInExRelease.body ?? undefined,
+        generate_release_notes: true
+    });
+
+    console.log('Uploading release assets...');
+    const assets = await getFileNames(DIST_DIR);
+    for await (const asset of assets) {
+        const uploadReleaseAsset = octokit.rest.repos.uploadReleaseAsset.defaults({
+            headers: {
+                'content-type': latestBepInExRelease.assets.find(a => a.name === basename(asset))?.content_type ?? 'application/x-zip-compressed'
             }
-        } catch (error) {
-            console.error(error);
-            exit(1);
-        }
-    } else {
-        console.error('Metadata unchanged!');
-        exit(1);
+        });
+        await octokit.request(`${uploadReleaseAsset.endpoint.DEFAULTS.method} ${uploadReleaseAsset.endpoint.DEFAULTS.url}`, {
+            ...uploadReleaseAsset.endpoint.DEFAULTS,
+            ...REPO,
+            release_id: release.data.id,
+            name: basename(asset),
+            data: (await fs.readFile(asset))
+        });
     }
+} catch (error) {
+    console.error(error);
+    exit(1);
 }
