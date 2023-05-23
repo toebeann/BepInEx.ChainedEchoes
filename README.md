@@ -36,8 +36,8 @@ To install manually, follow these instructions:
     - For Linux and macOS, download the archive designated `*nix`
 2. Extract the contents of the downloaded archive into the game folder:
     - On Windows, the game folder is the folder containing the game executable `Chained Echoes.exe`
-    - On Linux, the game folder is the folder containing the game executable `Chained Echoes.x86_64`
-    - On macOS, the game folder is the folder containing the game executable `Chained Echoes.app`
+    - On Linux, the game folder is the folder containing the game executable `Chained_Echoes.x86_64`
+    - On macOS, the game folder is the folder containing the game executable `ChainedEchoes.app`
 3. Depending on your operating system:
     - Windows users: Run the game. If everything runs correctly, you will see the BepInEx console pop up on your desktop.
     - Linux & macOS users: Follow the configuration instructions for your operating system below:
