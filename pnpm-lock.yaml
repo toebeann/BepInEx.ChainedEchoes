@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^5.0.0
     version: 5.0.1
   '@tsconfig/node18':
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^18.0.0
+    version: 18.2.2
   '@types/fs-extra':
     specifier: ^11.0.0
     version: 11.0.0
@@ -385,8 +385,8 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
-  /@tsconfig/node18@2.0.0:
-    resolution: {integrity: sha512-uI/B0ShkiEwTk036pncXucVlj4y11EW6mycQvCEzC1PkR2TBvdQZ5Wf96dp+XXWAc70FEDfvwTqanoaDpP6rPw==}
+  /@tsconfig/node18@18.2.2:
+    resolution: {integrity: sha512-d6McJeGsuoRlwWZmVIeE8CUA27lu6jLjvv1JzqmpsytOYYbVi1tHZEnwCNVOXnj4pyLvneZlFlpXUK+X9wBWyw==}
     dev: true
 
   /@types/aws-lambda@8.10.109:
