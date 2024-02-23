@@ -32,8 +32,8 @@ dependencies:
 
 devDependencies:
   '@octokit/request-error':
-    specifier: ^5.0.0
-    version: 5.0.1
+    specifier: ^6.0.0
+    version: 6.0.0
   '@tsconfig/node18':
     specifier: ^18.0.0
     version: 18.2.2
@@ -327,6 +327,14 @@ packages:
       '@octokit/types': 12.0.0
       deprecation: 2.3.1
       once: 1.4.0
+    dev: false
+
+  /@octokit/request-error@6.0.0:
+    resolution: {integrity: sha512-S8bh/JWrz7BBf451cbMxxrynZXNvyZ4cHstDFoeBdrake3tSX5/iZt1t1l34CVG5PURbd0EXJoFw9BgYwjworA==}
+    engines: {node: '>= 18'}
+    dependencies:
+      '@octokit/types': 12.0.0
+    dev: true
 
   /@octokit/request@8.1.4:
     resolution: {integrity: sha512-M0aaFfpGPEKrg7XoA/gwgRvc9MSXHRO2Ioki1qrPDbl1e9YhjIwVoHE7HIKmv/m3idzldj//xBujcFNqGX6ENA==}
@@ -491,6 +499,7 @@ packages:
 
   /deprecation@2.3.1:
     resolution: {integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==}
+    dev: false
 
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
@@ -669,6 +678,7 @@ packages:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
       wrappy: 1.0.2
+    dev: false
 
   /pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
@@ -817,6 +827,7 @@ packages:
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+    dev: false
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
