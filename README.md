@@ -83,7 +83,7 @@ To install manually, follow these instructions:
     It may be necessary to replace `./run_bepinex.sh` with an absolute path to the script in your game folder.
 1. Run the game via Steam
 
-At this moment you may not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing F1 to open the Configuration Manager window.
+At this moment you may not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing `F1` to open the Configuration Manager window.
 
 ### Configuration (macOS)
 
