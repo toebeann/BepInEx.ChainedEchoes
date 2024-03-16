@@ -101,7 +101,7 @@ At this moment you may not see any clear indication that BepInEx is working. It 
    1. Towards the bottom you should see a message saying that the program was blocked from opening. Click `Open Anyway` and confirm the prompt that pops up.
    1. Run the game via Steam
 
-At this moment you will not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [Configuration Manager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing F1 to open the Configuration Manager window.
+At this moment you will not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [Configuration Manager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing `F1` to open the Configuration Manager window.
 
 ## Installing mods
 
