@@ -2,6 +2,9 @@
 
 # BepInEx.ChainedEchoes
 
+> [!IMPORTANT]\
+> At present, Steam users _must_ switch to the `kickstarteralphabacker` beta branch to use this BepInEx pack!
+
 This is a [BepInEx](https://github.com/BepInEx/BepInEx) pack for Chained Echoes, preconfigured and ready to use on Windows, macOS and Linux (including SteamOS)!
 
 BepInEx is a general purpose framework for Unity modding. BepInEx includes tools and libraries to
