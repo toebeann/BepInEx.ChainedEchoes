@@ -1,6 +1,6 @@
 ![BepInEx logo](assets/logo.png)
 
-# BepInEx.ChainedEchoes
+# Tobey's BepInEx Pack for Chained Echoes
 
 > [!IMPORTANT]\
 > At present, Steam users _must_ switch to the `kickstarteralphabacker` beta branch to use this BepInEx pack!
