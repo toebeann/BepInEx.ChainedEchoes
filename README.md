@@ -55,8 +55,8 @@ If you get stuck, refer to the [gib README](https://github.com/toebeann/gib#read
 > It is _strongly_ recommended that macOS users [install with gib](#macos-gib), as manual installation on macOS is _extremely_ tedious and error prone!
 
 > [!TIP]\
-> The game folder is the folder containing the game's executable (e.g. `Chained Echoes.exe`).\
-> \
+> The game folder is the folder containing the game's executable (e.g. `Chained Echoes.exe`).
+> 
 > Steam users can find the game folder by right-clicking the game in their Steam library and selecting `Manage` -> `Browse local files`.
 
 To install manually, follow these instructions:
@@ -106,13 +106,13 @@ At this moment you will not see any clear indication that BepInEx is working. It
 ## Installing mods
 
 > [!NOTE]\
-> The paths in this section are relative to the game folder, i.e. `BepInEx/plugins` = `[game folder]/BepInEx/plugins`, where `[game folder]` is the path to the folder containing the game's executable (e.g. `Chained Echoes.exe`).\
-> \
+> The paths in this section are relative to the game folder, i.e. `BepInEx/plugins` = `[game folder]/BepInEx/plugins`, where `[game folder]` is the path to the folder containing the game's executable (e.g. `Chained Echoes.exe`).
+> 
 > Steam users can find the game folder by right-clicking the game in their Steam library and selecting `Manage` -> `Browse local files`.
 
 > [!TIP]\
-> "Extract the .zip" simply means take the contents of the .zip file and put them in the specified location.\
-> \
+> "Extract the .zip" simply means take the contents of the .zip file and put them in the specified location.
+> 
 > For example, if you are told to "extract the .zip" or "extract the contents of the archive" into `BepInEx/plugins`, then you can simply open the .zip archive by double-clicking on it, then just select everything inside and drag the contents into your `BepInEx/plugins` folder. Easy!
 
 **It is _strongly_ recommended to read and follow the instructions provided in the description of each mod you download.**
