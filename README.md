@@ -61,7 +61,7 @@ If you get stuck, refer to the [gib README](https://github.com/toebeann/gib#read
 
 To install manually, follow these instructions:
 
-1. [Download Tobey's BepInEx Pack for Chained Echoes](https://github.com/toebeann/BepInEx.ChainedEchoes/releases/latest/download/Tobey.s.BepInEx.Pack.for.Chained.Echoes.zip).
+1. [Download Tobey's BepInEx Pack for Chained Echoes](https://github.com/toebeann/BepInEx.ChainedEchoes/releases/latest/download/Tobey.s.BepInEx.Pack.for.Chained.Echoes.zip)
 1. Extract the contents of the downloaded archive into the game folder\
    **ℹ️** _That just means open the .zip file and drag the files and folders out into the game folder!_
 3. Depending on your operating system:
