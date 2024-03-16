@@ -1,0 +1,12 @@
+{
+  "version": "1.2.0",
+  "name": "Tobey's BepInEx Pack for Chained Echoes",
+  "repo": "toebeann/bepinex.chainedechoes",
+  "bepinex": "bepinex/bepinex",
+  "sources": [
+  ],
+  "unity": {
+    "version": "2020.3.36",
+    "corlibs": ["mscorlib.dll"]
+  }
+}
