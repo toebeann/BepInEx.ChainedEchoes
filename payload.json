@@ -4,6 +4,8 @@
   "repo": "toebeann/bepinex.chainedechoes",
   "bepinex": "bepinex/bepinex",
   "sources": [
+    "toebeann/Tobey.FileTree",
+    "toebeann/Tobey.PluginDoctor"
   ],
   "unity": {
     "version": "2020.3.36",
