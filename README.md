@@ -72,7 +72,7 @@ To install manually, follow these instructions:
 > **With just this pack installed, you will not see any changes in-game!**\
 > Check the `LogOutput.log` file in the `BepInEx` folder to determine whether BepInEx has loaded.
 
-### Configuration (Linux)
+### Configuration on Linux (SteamOS etc.)
 
 1. If you don't own the game on Steam, add it to Steam as a non-Steam game
 1. Make the `run_bepinex.sh` executable with `chmod u+x run_bepinex.sh`
@@ -85,7 +85,7 @@ To install manually, follow these instructions:
 
 At this moment you may not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing `F1` to open the Configuration Manager window.
 
-### Configuration (macOS)
+### Configuration on macOS
 
 1. If you don't own the game on Steam, [add it to Steam as a non-Steam game](https://github.com/toebeann/gib/wiki/Adding-non%E2%80%90Steam-games-to-Steam)
 1. Make the `run_bepinex.sh` executable in Terminal with `chmod u+x run_bepinex.sh`
