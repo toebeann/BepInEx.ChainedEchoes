@@ -74,32 +74,32 @@ To install manually, follow these instructions:
 
 ### Configuration on Linux (SteamOS etc.)
 
-1. If you don't own the game on Steam, add it to Steam as a non-Steam game
+1. If you don't own the game on Steam, add it to Steam as a non-Steam game.
 1. Make the `run_bepinex.sh` executable with `chmod u+x run_bepinex.sh`
 1. In Steam, go to the game's properties and set the launch arguments to:
     ```
     ./run_bepinex.sh %command%
     ```
     It may be necessary to replace `./run_bepinex.sh` with an absolute path to the script in your game folder.
-1. Run the game via Steam
+1. Run the game via Steam.
 
 At this moment you may not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing `F1` to open the Configuration Manager window.
 
 ### Configuration on macOS
 
-1. If you don't own the game on Steam, [add it to Steam as a non-Steam game](https://github.com/toebeann/gib/wiki/Adding-non%E2%80%90Steam-games-to-Steam)
+1. If you don't own the game on Steam, [add it to Steam as a non-Steam game](https://github.com/toebeann/gib/wiki/Adding-non%E2%80%90Steam-games-to-Steam).
 1. Make the `run_bepinex.sh` executable in Terminal with `chmod u+x run_bepinex.sh`
 1. In Steam, go to the game's properties and set the launch arguments to:
     ```
     "<path to game folder>/run_bepinex.sh" %command%
     ```
     Make sure to replace `<path to game folder>` with the path to the folder where Chained Echoes is installed!
-1. Run the game via Steam
+1. Run the game via Steam.
 1. At this point, you may see a prompt warning you that `libdoorstop_x64.dylib` cannot be opened because the developer is unverified. In this case:
-   1. Open System Preferences
-   1. Go to Security & Privacy and select the General tab
+   1. Open System Preferences.
+   1. Go to Security & Privacy and select the General tab.
    1. Towards the bottom you should see a message saying that the program was blocked from opening. Click `Open Anyway` and confirm the prompt that pops up.
-   1. Run the game via Steam
+   1. Run the game via Steam.
 
 At this moment you will not see any clear indication that BepInEx is working. It is suggested to test by installing a simple plugin such as [Configuration Manager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases) and then pressing `F1` to open the Configuration Manager window.
 
