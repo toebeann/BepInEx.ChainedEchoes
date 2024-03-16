@@ -30,7 +30,7 @@ In particular, this pack comes with:
 
 ### Windows (Vortex)
 
-[Vortex](https://www.nexusmods.com/about/vortex/) is a tool for installing and managing mods on Windows. It can install all kinds of mods for Subnautica and other games, including this pack.
+[Vortex](https://www.nexusmods.com/about/vortex/) is a tool for installing and managing mods on Windows. It can install all kinds of mods for Chained Echoes and other games, including this pack.
 
 1. Install [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/) and the [Chained Echoes Support](https://www.nexusmods.com/site/mods/519) extension if you haven't already. Make sure they're fully up-to-date.
 1. In Vortex, simply begin managing Chained Echoes from the Games tab, and Vortex will automatically install the BepInEx Pack for you.
