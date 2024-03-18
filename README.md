@@ -22,7 +22,6 @@ BepInEx is currently [one of the most popular modding tools for Unity on GitHub]
 This pack is preconfigured and ready to use for Chained Echoes modding.\
 In particular, this pack comes with:
 
-- [Tobey.PluginDoctor](https://github.com/toebeann/Tobey.PluginDoctor), a BepInEx plugin & patcher combo which diagnoses and reports advice on how to handle common problems with BepInEx 5 plugins,
 - [Tobey.FileTree](https://github.com/toebeann/Tobey.FileTree), a configurable BepInEx plugin which logs the game's file tree to aid in troubleshooting issues, and
 - the `mscorlib.dll` assembly for Unity v2020.3.36 as the one shipped with the game has certain features removed. This enables compatibility with [Unity Explorer](https://github.com/sinai-dev/UnityExplorer)'s REPL functionality, as well as any plugin requiring access to the `System.Reflection.Emit` namespace, among others.
 
@@ -177,7 +176,6 @@ However, the .zip create by this repository's code contains binaries from the fo
 | Project                                                              | License(s)                                                                   |
 | ---------------------------------------------------------------------| -----------------------------------------------------------------------------|
 | [BepInEx](https://github.com/BepInEx/BepInEx)                        | [LGPL-2.1](https://github.com/BepInEx/BepInEx/blob/master/LICENSE)           |
-| [Tobey.PluginDoctor](https://github.com/toebeann/Tobey.PluginDoctor) | [LGPL-3.0](https://github.com/toebeann/Tobey.PluginDoctor/blob/main/LICENSE) |
 | [Tobey.FileTree](https://github.com/toebeann/Tobey.FileTree)         | [LGPL-3.0](https://github.com/toebeann/Tobey.FileTree/blob/main/LICENSE)     |
 
 The code in this repository is licensed under the [LGPL-2.1 license](https://github.com/toebeann/BepInEx.SupermarketSimulator/blob/main/LICENSE).
