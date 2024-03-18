@@ -23,11 +23,16 @@ This pack is preconfigured and ready to use for Chained Echoes modding.\
 In particular, this pack comes with:
 
 - [Tobey.PluginDoctor](https://github.com/toebeann/Tobey.PluginDoctor), a BepInEx plugin & patcher combo which diagnoses and reports advice on how to handle common problems with BepInEx 5 plugins,
-- [Tobey.FileTree](https://github.com/toebeann/Tobey.FileTree), a configurable BepInEx plugin which logs the game's file tree to aid in troubleshooting issues,
-- a preconfigured `BepInEx.cfg` that enables the BepInEx console and more extensive logging, and
+- [Tobey.FileTree](https://github.com/toebeann/Tobey.FileTree), a configurable BepInEx plugin which logs the game's file tree to aid in troubleshooting issues, and
 - the `mscorlib.dll` assembly for Unity v2020.3.36 as the one shipped with the game has certain features removed. This enables compatibility with [Unity Explorer](https://github.com/sinai-dev/UnityExplorer)'s REPL functionality, as well as any plugin requiring access to the `System.Reflection.Emit` namespace, among others.
 
 ## Easy Automated Installation
+
+> [!IMPORTANT]
+> 
+> **With just this pack installed, you will not see any changes in-game!**
+> 
+> Check the `LogOutput.log` file in the `BepInEx` folder to determine whether BepInEx has loaded.
 
 ### Windows (Vortex)
 
@@ -38,7 +43,7 @@ In particular, this pack comes with:
 1. Check the 🔔 notifications area at the top right of Vortex:
     - If you see a notification saying "Elevation needed to deploy," click `Elevate` and authorize the elevation.
     - If you see any other notifications saying "Deployment needed" or similar, click `Deploy`.
-1. Run the game. If everything runs correctly, you will see the BepInEx console pop up on your desktop.
+1. Run the game.
 
 ### macOS (gib)
 
@@ -68,7 +73,7 @@ To install manually, follow these instructions:
 1. Extract the contents of the downloaded archive into the game folder.\
    **ℹ️** _That just means open the .zip file and drag the files and folders out into the game folder!_
 3. Depending on your operating system:
-    - Windows users: Run the game. If everything runs correctly, you will see the BepInEx console pop up on your desktop.
+    - Windows users: Run the game.
     - Linux & macOS users: Follow the configuration instructions for your operating system below:
 
 > [!IMPORTANT]
