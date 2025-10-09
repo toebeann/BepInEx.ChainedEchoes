@@ -21,7 +21,7 @@ jobs:
             - name: Setup deno @ v1
               uses: denoland/setup-deno@v1
               with:
-                  deno-version: v1.x
+                  deno-version: 2.x
 
             - name: Update and release 🚀
               run: deno task run
